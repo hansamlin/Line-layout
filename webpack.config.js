@@ -12,19 +12,12 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/i,
-        use: [
-          // Creates `style` nodes from JS strings
-          'style-loader',
-          // Translates CSS into CommonJS
-          'css-loader',
-          // Compiles Sass to CSS
-          'sass-loader'
-        ]
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
-  },
-//   devServer: {
-//     contentBase: path.join(__dirname, 'dist'),
-//     compress: true
-//   }
+  }
+  //   devServer: {
+  //     contentBase: path.join(__dirname, 'dist'),
+  //     compress: true
+  //   }
 };

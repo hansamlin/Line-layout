@@ -9,9 +9,9 @@ div {
     width: 676px;
     height: 600px;
     border: 1px solid steelblue;
-    transform: scale(0.8, 0.8);
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
+    margin: 2rem 4rem;
   }
 
   &#header {
@@ -34,8 +34,37 @@ div {
       font-size: 15px;
 
       span {
-        &#icon {
-          margin-left: 0.6em;
+        &.icon-search {
+          margin-left: 0.6rem;
+        }
+
+        &.right {
+          float: right;
+          position: relative;
+          top: 0.5px;
+        }
+
+        &.icon-caret-down {
+            margin-right: 0.5rem;
+        }
+      }
+
+      .chevron-left {
+        float: right;
+        border-width: 1px;
+        border-color: #e8ecef;
+        border-style: solid none solid solid;
+        height: calc(40.5px / 1.5);
+        width: 1rem;
+        text-align: center;
+        position: relative;
+        top: calc((40.5px - (40.5px / 1.5)) / 2);
+        line-height: calc(40.5px / 1.5);
+
+        span {
+          &.icon-chevron-left {
+            font-size: 0.5rem;
+          }
         }
       }
     }
