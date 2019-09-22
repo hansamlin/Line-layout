@@ -4,6 +4,9 @@
 }
 
 div {
+  box-sizing: border-box;
+  font-size: 0;
+  -webkit-text-size-adjust: none;
   &#line {
     display: inline-block;
     width: 676px;
@@ -25,13 +28,17 @@ div {
     width: 270.5px;
     height: calc(100% - 22.5px);
     border-right: 1px solid #d9dee0;
+    display: inline-flex;
+    vertical-align: top;
 
     #search {
       height: 40.5px;
+      width: 100%;
       line-height: 40.5px;
       border-bottom: 1px solid #e3e7ed;
       color: #b2b5c0;
       font-size: 15px;
+      display: inline-block;
 
       span {
         &.icon-search {
@@ -42,10 +49,11 @@ div {
           float: right;
           position: relative;
           top: 0.5px;
+          margin: 0 2px;
         }
 
         &.icon-caret-down {
-            margin-right: 0.5rem;
+          margin-right: 0.5rem;
         }
       }
 
@@ -59,13 +67,33 @@ div {
         text-align: center;
         position: relative;
         top: calc((40.5px - (40.5px / 1.5)) / 2);
-        line-height: calc(40.5px / 1.5);
+        line-height: calc(40px / 1.5);
 
         span {
           &.icon-chevron-left {
             font-size: 0.5rem;
           }
         }
+      }
+    }
+  }
+
+  &#right {
+    font-size: 2rem;
+    display: inline-flex;
+    width: calc(100% - 270.5px);
+    height: calc(100% - 22.5px);
+    text-align: center;
+
+    div {
+      img {
+        width: 100px;
+        height: 99px;
+      }
+
+      &.img {
+          width: 100%;
+          margin: auto;
       }
     }
   }
